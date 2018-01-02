@@ -1,0 +1,5 @@
+/**
+ * unigrid JavaScript
+ */
+
+'use strict';

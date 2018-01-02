@@ -1,0 +1,108 @@
+/*------------------------------------*\
+  #UNIGRID-CORE
+\*------------------------------------*/
+
+
+.brick {
+  margin: $unigrid-half-gutter;
+  padding: $unigrid-brick-padding-ttb $unigrid-brick-padding-rtl;
+
+  min-height: ($unigrid-brick-height - $unigrid-gutter - $unigrid-brick-padding-ttb);
+}
+
+.unigrid--border {
+  // todo
+  border: $unigrid-border-width solid $unigrid-border-color;
+}
+
+.unigrid--border ~ .unigrid--border {
+  border-top: none;
+}
+
+.unigrid--row.unigrid--border {
+  width: calc(100% - #{(2 * $unigrid-border-width)});
+  // todo height when col!
+}
+.unigrid--border .brick {
+  margin: 0 $unigrid-half-gutter;
+  padding: ($unigrid-brick-padding-ttb + $unigrid-half-gutter) ($unigrid-brick-padding-rtl - $unigrid-border-width) ($unigrid-brick-padding-ttb + $unigrid-half-gutter) $unigrid-brick-padding-rtl;
+
+  border-left: $unigrid-border-width solid $unigrid-border-color;
+}
+.unigrid--border .brick:first-child,
+.unigrid--border .brick.first{
+  margin-left: 0;
+  border-left: none;
+}
+.unigrid--border .brick:last-child,
+.unigrid--border .brick.last{
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.brick--inverse {
+  background: $default-color-inverse;
+  color: $default-color;
+}
+
+.brick--hide,
+.brick-mobile--show {
+  display: none;
+}
+.brick--show {
+  display: flex;
+}
+
+.brick > img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.brick--col--flex {
+  height: auto;
+  max-height: 100%;
+}
+
+.unigrid--col > .brick > img {
+  vertical-align: top;
+  width: auto;
+}
+
+.unigrid--col {
+  height: 100%;
+
+  width: 100%;
+
+  padding: 0;
+}
+
+.unigrid--row {
+  width: 100%;
+
+  padding: 0;
+}
+
+img.brick,
+.brick--img {
+  vertical-align: top;
+  padding: 0;
+}
+
+.unigrid--col > img.brick {
+  width: auto;
+}
+
+hr {
+  margin: ((($unigrid-brick-height + $unigrid-gutter)/2) - $unigrid-hr-border) 0;
+
+  border: $unigrid-hr-border solid #000000;
+}
+
+.container {
+  max-width: (($unigrid-brick-width+$unigrid-gutter)*$unigrid)-$unigrid-gutter;
+  width: (($unigrid-brick-width+$unigrid-gutter)*$unigrid)-$unigrid-gutter;
+
+  height: 100%;
+
+  margin: 0 auto;
+}

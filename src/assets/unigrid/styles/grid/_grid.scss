@@ -1,0 +1,62 @@
+/* ==========================================================
+ * grid/_grid.scss
+ *
+ * Author: Thomas D'Ascoli, thomas@dasco.li
+ * Date:   2018-01-02 13:03
+ *
+ * Copyright 2018 tdascoli
+ * Licensed under MIT
+ =========================================================== */
+
+/*------------------------------------*\
+  #IMPORTS
+\*------------------------------------*/
+
+@import '../variables';
+@import 'functions';
+@import 'mixins';
+
+/*------------------------------------*\
+  #CORE
+\*------------------------------------*/
+.unigrid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	&.unigrid--row {
+		width: unigrid-row();
+
+		margin: 0;
+	}
+}
+
+.unigrid--container {
+	width: unigrid-container();
+
+	height: 100%;
+
+	padding: 0 $unigrid-gutter;
+}
+
+/*------------------------------------*\
+  #BRICKS
+\*------------------------------------*/
+
+
+.brick {
+	margin: $unigrid-brick-gutter;
+	padding: $unigrid-brick-padding-ttb $unigrid-brick-padding-rtl;
+
+	height: brick-height();
+
+	&:first-of-type {
+		margin-left: 0;
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+@include grid-row($unigrid);

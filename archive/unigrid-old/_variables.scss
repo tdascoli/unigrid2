@@ -1,0 +1,32 @@
+//* vars.grid */
+
+$unigrid: 24;
+$unigrid-gutter: 6px;
+$unigrid-half-gutter: ($unigrid-gutter/2);
+$unigrid-brick-padding-ttb: 2px;
+$unigrid-brick-padding-rtl: 4px;
+$unigrid-brick-width: 42px;
+$unigrid-brick-height: 40px;
+
+//* vars.mobile.grid */
+
+$mobile-unigrid: 12;
+$mobile-unigrid-width: (1/$mobile-unigrid)*100%;
+$mobile-unigrid-brick-height: $unigrid-brick-height;
+
+//* vars.grid divers */
+
+$unigrid-hr-border: 1px;
+
+//* vars.colors */
+$default-color-inverse: #000;
+$default-color: #fff;
+
+//* vars.responsive */
+$media-phone: "only screen and (max-width : 767px)";
+$media-tablet: "only screen and (min-width: 768px)";
+$media-desktop: "only screen and (min-width: 1024px)";
+
+//* vars.border */
+$unigrid-border-width: 2px;
+$unigrid-border-color: #000;

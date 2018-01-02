@@ -1,0 +1,106 @@
+/*------------------------------------*\
+  #DESKTOP-UNIGRID
+\*------------------------------------*/
+
+@media #{$media-desktop} {
+
+  .brick:first-child,
+  .brick.first {
+    margin-left: 0;
+  }
+
+  .brick:last-child,
+  .brick.last {
+    margin-right: 0;
+  }
+
+  .unigrid--row > .unigrid--col.brick:last-child,
+  .unigrid--row > .unigrid--col.brick.last {
+    margin-left: $unigrid-half-gutter;
+  }
+
+  img.brick,
+  .brick > img,
+  .brick--img{
+    height: 100%;
+  }
+
+  /*------------------------------------*\
+    #GRID-ROW
+  \*------------------------------------*/
+
+  .unigrid--row {
+    width: (($unigrid-brick-width+$unigrid-gutter)*$unigrid)-$unigrid-gutter;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .unigrid--row > .unigrid--col {
+    padding: 0;
+    margin: 0;
+
+    max-width: 100%;
+  }
+
+  @include grid-row($unigrid);
+
+  /*------------------------------------*\
+    #GRID-COLUMN
+  \*------------------------------------*/
+
+
+  .unigrid--col {
+    max-height: 100%;
+    width: 100%;
+
+    padding: 0;
+  }
+
+  .unigrid--col > .brick {
+    margin: $unigrid-half-gutter 0;
+    padding: $unigrid-brick-padding-ttb $unigrid-brick-padding-rtl;
+
+    max-width: calc(100% - #{2*$unigrid-brick-padding-rtl});
+
+    display: inline-block;
+  }
+
+  .unigrid--col > img.brick,
+  .unigrid--col > .brick--img {
+    max-width: calc(100% - #{$unigrid-gutter});
+  }
+
+  .unigrid--col > .brick.unigrid--row {
+    display: flex;
+  }
+
+  .unigrid--col > .unigrid--row {
+    padding: 0;
+    margin: 0;
+
+    max-width: 100%;
+  }
+
+  hr.brick--col {
+    background: $default-color-inverse;
+
+    height: ($unigrid-brick-height+$unigrid-gutter);
+    max-height: ($unigrid-brick-height+$unigrid-gutter);
+
+    width: 100%;
+  }
+
+  @include grid-col($unigrid);
+
+  /*------------------------------------*\
+    #GRID-ORDER
+  \*------------------------------------*/
+
+  @include grid-order($unigrid);
+}

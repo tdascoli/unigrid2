@@ -1,0 +1,76 @@
+/*------------------------------------*\
+  #MOBILE-UNIGRID
+\*------------------------------------*/
+
+@media #{$media-phone} {
+
+  .brick {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .brick-mobile--hide {
+    display: none;
+  }
+  .brick-mobile--show {
+    display: flex;
+  }
+
+  .container {
+    max-width: 100%;
+    height: 100%;
+
+    margin: 0;
+  }
+
+  .unigrid--row {
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .unigrid--row > .brick {
+
+  }
+
+  @include grid-mobile-row($mobile-unigrid);
+
+  /*------------------------------------*\
+    #MOBILE-GRID-COLUMN
+  \*------------------------------------*/
+
+  .unigrid--col > .brick {
+    max-width: calc(100% - #{(2*$unigrid-brick-padding-rtl)+$unigrid-gutter});
+
+    display: inline-block;
+  }
+
+  .unigrid--col > img.brick,
+  .unigrid--col > .brick--img {
+    max-width: calc(100% - #{$unigrid-gutter});
+  }
+
+  .unigrid--col > .brick.unigrid--row {
+    display: flex;
+  }
+
+  .unigrid--col > .unigrid--row {
+    height: 100%;
+    max-height: 100%;
+
+    margin: 0;
+    max-width: 100%;
+  }
+
+  @include grid-mobile-col($mobile-unigrid);
+
+  /*------------------------------------*\
+    #MOBILE-GRID-ORDER
+  \*------------------------------------*/
+
+  @include grid-mobile-order($mobile-unigrid);
+}

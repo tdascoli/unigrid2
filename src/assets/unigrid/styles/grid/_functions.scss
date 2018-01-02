@@ -1,0 +1,23 @@
+@function brick-width($brick:1) {
+	$brick-width: ($unigrid-brick-height - (2*$unigrid-brick-padding-rtl));
+
+	@return (($brick-width + $unigrid-half-gutter) * $brick) - $unigrid-half-gutter;
+}
+
+@function brick-height($brick:1) {
+	$brick-height: ($unigrid-brick-width - (2*$unigrid-brick-padding-ttb));
+
+	@return (($brick-height + $unigrid-half-gutter) * $brick) - $unigrid-half-gutter;
+}
+
+@function unigrid-row() {
+	$brick-width: brick-width($unigrid);
+
+	@return $brick-width;
+}
+
+@function unigrid-container() {
+	$container-width: unigrid-row() + (2*$unigrid-gutter);
+
+	@return $container-width;
+}

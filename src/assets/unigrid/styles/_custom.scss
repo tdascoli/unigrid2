@@ -1,0 +1,38 @@
+/* ==========================================================
+ * _custom.scss
+ * Bootstrap overrides
+ * Copy variables from `_variables.scss` to this file to override default values
+ * without modifying source files.
+ *
+ *
+ * Author: Thomas D'Ascoli, thomas@dasco.li
+ * Date:   2017-12-27 16:49
+ *
+ * Copyright 2017 alv-ch
+ * Licensed under MIT
+ =========================================================== */
+
+/**
+ * CONTENTS
+ *
+ * Options
+ */
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:			false;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:	'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-family-base:          $font-family-sans-serif;
+
+$headings-font-weight:      700;
+
+// Navbar
+
+$navbar-brand-font-size:	3.3rem;
