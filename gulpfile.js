@@ -37,10 +37,13 @@ var config = {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
 			unigrid: 'src/assets/unigrid/styles/unigrid.scss'
 		},
+		sass: 'src/assets/unigrid/styles/**/*',
+		js: 'src/assets/unigrid/scripts/**/*',
 		images: 'src/assets/unigrid/images/**/*',
 		views: 'src/unigrid/views/*.html'
 	},
-	dest: 'dist'
+	dest: 'dist',
+	build: 'build'
 };
 
 
@@ -120,6 +123,31 @@ gulp.task('assemble', function (done) {
 	done();
 });
 
+// clean:build
+gulp.task('clean:build', function (cb) {
+	del([config.build], cb);
+});
+// build
+gulp.task('styles:build', function () {
+	gulp.src(config.src.styles.unigrid)
+		.pipe(sourcemaps.init())
+		.pipe(sass(options).on('error', sass.logError))
+		.pipe(prefix('last 1 version'))
+		.pipe(gulpif(!config.dev, csso()))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest(config.build + '/css'))
+		.pipe(gulpif(config.dev, reload({stream:true})));
+});
+gulp.task('sass-files:build', function() {
+	return gulp.src(config.src.sass)
+		.pipe(gulp.dest(config.build + '/scss'));
+});
+// scripts:build
+gulp.task('scripts:build', ['scripts'], function () {
+	return gulp.src(config.src.js)
+		.pipe(gulp.dest(config.build + '/scripts'));
+});
+
 
 // server
 gulp.task('serve', function () {
@@ -166,6 +194,24 @@ gulp.task('serve', function () {
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
 
+});
+
+// default build task
+gulp.task('build', ['clean:build'], function () {
+
+	// define build tasks
+	var tasks = [
+		'styles:build',
+		'scripts:build',
+		'sass-files:build'
+	];
+
+	// run build
+	runSequence(tasks, function () {
+		if (config.dev) {
+			gulp.start('serve');
+		}
+	});
 });
 
 

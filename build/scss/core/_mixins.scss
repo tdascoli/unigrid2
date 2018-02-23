@@ -1,0 +1,22 @@
+/*------------------------------------*\
+  #GRID-MIXINS
+\*------------------------------------*/
+
+@mixin grid-row($var) {
+	@for $i from 1 through $var {
+		.brick--#{$i} {
+			flex-grow: 1;
+			flex-basis: brick-width($i);
+
+			max-width: brick-width($i);
+		}
+	}
+}
+
+@mixin grid-col($var) {
+	@for $i from 1 through $var {
+		.brick--col--#{$i} {
+			height: brick-height($i);
+		}
+	}
+}

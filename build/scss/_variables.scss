@@ -1,0 +1,69 @@
+/* ==========================================================
+ * _variables.scss
+ *
+ * Author: Thomas D'Ascoli, thomas@dasco.li
+ * Date:   2017-12-27 17:27
+ *
+ * Copyright 2017 tdascoli
+ * Licensed under MIT
+ =========================================================== */
+
+/*------------------------------------*\
+  #GOLDEN RATIO
+\*------------------------------------*/
+
+$phi: 1.61803398875;
+$golden-ratio: 0.61803398875;
+$golden-ratio-tall: percentage($golden-ratio);
+$golden-ratio-small: 100 - percentage($golden-ratio);
+
+/*------------------------------------*\
+  #GRID
+\*------------------------------------*/
+
+$unigrid: 12;
+// todo halfgutter = 1/4 gutter!!
+$unigrid-brick-gutter: 5px;
+$unigrid-half-gutter: (2*$unigrid-brick-gutter);
+$unigrid-gutter: (2*$unigrid-half-gutter);
+
+$unigrid-brick-padding-ttb: 4px;
+$unigrid-brick-padding-rtl: 4px;
+
+$unigrid-brick-height: ($unigrid-gutter*4);
+$unigrid-brick-width: ($unigrid-gutter*4);
+
+//* mobile.grid */
+
+$mobile-unigrid: 12;
+$mobile-unigrid-width: (1/$mobile-unigrid)*100%;
+$mobile-unigrid-brick-height: $unigrid-brick-height;
+
+//* grid divers */
+
+$unigrid-hr-border: 1px;
+
+//* colors */
+$default-color-inverse: #000;
+$default-color: #fff;
+
+//* responsive */
+$media-phone: "only screen and (max-width : 767px)";
+$media-tablet: "only screen and (min-width: 768px)";
+$media-desktop: "only screen and (min-width: 1024px)";
+
+//* border */
+$unigrid-border-width: 2px;
+$unigrid-border-color: #000;
+
+/*------------------------------------*\
+  #NAVBAR
+\*------------------------------------*/
+
+$navbar-height: $unigrid-brick-height;
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+$footer-height: ($unigrid-brick-height / 2);

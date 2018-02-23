@@ -1,0 +1,72 @@
+/* ==========================================================
+ * icons.scss
+ * Icons elements styles
+ *
+ * Author: Yann Gouffon, yann@antistatique.net
+ * Date:   2014-04-28 17:17:40
+ *
+ * Copyright 2014 Federal Chancellery of Switzerland
+ * Licensed under MIT
+ =========================================================== */
+
+.icon {
+	&.icon--before:before {
+		font-family: FontAwesome;
+		display: inline-block;
+	}
+	&.icon--after:after {
+		font-family: FontAwesome;
+		display: inline-block;
+	}
+}
+
+span.icon {
+	font-family: FontAwesome;
+	position: relative;
+}
+
+$icon-list: (
+	close  :                '\f00d',
+	menu   :				'\f0c9',
+	search :                '\f002',
+	less   :                '\f053',
+	greater:				$breadcrumb-divider,
+	pdf	   :				'\f1c1',
+	word   :				'\f1c2',
+	external:				'\f08e',
+	root   :				'\f078',
+	power   :				'\f077',
+	step-forward:			'\f051'
+
+);
+
+@function get-font-icon($icon) {
+	@if not map-has-key($icon-list, $icon) {
+		@warn "Key `#{$icon}` not found in $icon-list map.";
+	}
+	@return map-get($icon-list, #{$icon});
+}
+
+@each $key, $value in $icon-list {
+	span.icon.icon--#{$key}:after {content: $value;}
+	.icon--before.icon--#{$key}:before {
+		content: $value;
+		padding-right: 5px;
+		position: relative;
+		top: 1px;
+	}
+	.icon--after.icon--#{$key}:after {
+		content: $value;
+		padding-left: 3px;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.icon--before.pull-right.icon--print:before, a.pull-right.icon--print[data-toggle=collapse]:before {
+	padding-right: 0;
+}
+
+a.icon:hover {
+	text-decoration: underline; // fix to override normal bootstrap behaviour
+}
