@@ -1,5 +1,6 @@
 {
   "name": "unigrid-css",
+  "version": "1.0.0",
   "description": "unigrid css",
   "main": [
     "src/assets/unigrid/styles/unigrid.scss",
