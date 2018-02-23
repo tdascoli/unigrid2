@@ -1,0 +1,44 @@
+---
+layout: bootstrap
+fabricator: false
+---
+
+{{> content-header}}
+
+<div class="row">
+	<div class="col-4">
+		<ul class="list-unstyled">
+			<li>Basics</li>
+			<li>Trainingsinhalte, Coaching <small class="text-muted">optional</small></li>
+			<li>Varianten <small class="text-muted">optional</small></li>
+		</ul>
+	</div>
+	<div class="col-8">
+		<!-- exercise -->
+		<div class="form-group">
+			<label for="ex-name">Name</label>
+			<input type="text" class="form-control" id="ex-name" placeholder="Enter text" />
+		</div>
+		<div class="form-group">
+			<label for="ex-trainingsinhalte">Trainingsinhalte <small class="text-muted">optional</small></label>
+			<input type="text" class="form-control" id="ex-trainingsinhalte" placeholder="Enter text" />
+		</div>
+		<div class="form-group">
+			<label for="ex-beschreibung">Beschreibung [+]</label>
+			<textarea class="form-control" id="ex-beschreibung" rows="6"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-organisation">Organisation</label>
+			<input type="file" class="form-control-file" id="ex-organisation" />
+		</div>
+		<div class="form-group">
+			<label for="ex-coaching">Coaching <small class="text-muted">optional</small> [+]</label>
+			<textarea class="form-control" id="ex-coaching" rows="4"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-beschreibung-more">Variante <small class="text-muted">optional</small> [+]</label>
+			<textarea class="form-control" id="ex-beschreibung-more" rows="2"></textarea>
+		</div>
+		<!-- /exercise -->
+	</div>
+</div>

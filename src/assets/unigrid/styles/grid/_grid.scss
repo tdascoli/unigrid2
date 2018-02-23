@@ -13,12 +13,13 @@
 \*------------------------------------*/
 
 @import '../variables';
-@import 'functions';
-@import 'mixins';
+@import '../core/utilities';
+@import '../core/mixins';
 
 /*------------------------------------*\
   #CORE
 \*------------------------------------*/
+
 .unigrid {
 	display: flex;
 	flex-direction: row;
@@ -29,14 +30,36 @@
 
 		margin: 0;
 	}
+
+	&.unigrid--col {
+		max-width: unigrid-row();
+
+		margin: 0;
+	}
+
+	&:first-of-type .brick {
+		margin-top: 0;
+	}
+
+	&:last-of-type .brick {
+		margin-bottom: 0;
+	}
 }
 
-.unigrid--container {
+.unigrid__container {
 	width: unigrid-container();
 
 	height: 100%;
 
 	padding: 0 $unigrid-gutter;
+
+	&.unigrid__header {
+		height: brick-height();
+	}
+
+	&.unigrid__footer{
+		height: brick-height(.5);
+	}
 }
 
 /*------------------------------------*\
@@ -60,3 +83,5 @@
 }
 
 @include grid-row($unigrid);
+
+@include grid-col($unigrid);

@@ -1,9 +1,22 @@
 /**
  * CONTENTS
  *
+ * Navbar
  * Navbar brand
  *
  */
+
+/*------------------------------------*\
+  #Navbar
+
+  Provide a static navbar from which we
+  expand to create full-width, fixed,
+  and other navbar variations.
+\*------------------------------------*/
+
+.navbar {
+	height: $navbar-height;
+}
 
 /*------------------------------------*\
   #Navbar brand

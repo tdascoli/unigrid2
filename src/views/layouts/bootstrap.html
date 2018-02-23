@@ -9,40 +9,9 @@
 	{{#if fabricator}}<link rel="stylesheet" href="{{baseurl}}/assets/fabricator/styles/f.css">{{/if}}
 
 	<!-- unigrid styles -->
+	<link  rel="stylesheet" href="//cdn.materialdesignicons.com/2.1.19/css/materialdesignicons.min.css">
 	<link rel="stylesheet" href="{{baseurl}}/assets/unigrid/styles/unigrid.css">
 	<!-- /unigrid styles -->
-
-	<!-- Custom styles for this template -->
-	<style>
-		/* Sticky footer styles
-		-------------------------------------------------- */
-		html {
-			position: relative;
-			min-height: 100%;
-		}
-		body {
-			/* Margin bottom by footer height */
-			margin-bottom: 60px;
-		}
-		.footer {
-			position: absolute;
-			bottom: 0;
-			width: 100%;
-			/* Set the fixed height of the footer here */
-			height: 60px;
-			line-height: 60px; /* Vertically center the text there */
-			background-color: #f5f5f5;
-		}
-
-
-		/* Custom page CSS
-        -------------------------------------------------- */
-		/* Not required for template or sticky footer method. */
-
-		body > .container {
-			padding: 78px 15px 0;
-		}
-	</style>
 </head>
 
 <body>
@@ -57,7 +26,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarCollapse">
-				<ul class="navbar-nav mr-auto">
+				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
 						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
 					</li>
@@ -78,13 +47,16 @@
 	{% body %}
 </main>
 
-<footer class="footer">
+<footer class="footer bg-dark">
 	<div class="container">
 		<span>Made with &hearts; by tdascoli</span>
 	</div>
 </footer>
 
-
+<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
 <!-- unigrid scripts -->
 <script src="{{baseurl}}/assets/unigrid/scripts/unigrid.js"></script>
 <!-- /unigrid scripts -->

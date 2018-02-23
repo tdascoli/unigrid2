@@ -1,0 +1,46 @@
+---
+layout: bootstrap
+fabricator: false
+---
+
+{{> content-header}}
+
+<div class="row">
+	<div class="col-4">
+		<ul class="list-unstyled">
+			<li><strong>Grundlagen</strong></li>
+			<li><a href="{{baseurl}}/pages/training-lesson.html">Trainingsinhalte</a></li>
+			<li>Zusätzliche Informationen <small class="text-muted">optional</small></li>
+		</ul>
+	</div>
+	<div class="col-8">
+		<h2>Grundlagen</h2>
+		<div class="form-row">
+			<div class="form-group col">
+				<label for="ex-team">Team</label>
+				<input type="text" class="form-control" id="ex-team" placeholder="Enter text" />
+			</div>
+			<div class="form-group col">
+				<label for="ex-date">Datum</label>
+				<input type="datetime-local" class="form-control" id="ex-date" placeholder="Enter text" />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="ex-trainingsinhalte">Ziele</label>
+			<input type="text" class="form-control" id="ex-trainingsinhalte" placeholder="Enter text" />
+		</div>
+
+		<hr />
+
+		<h2>Zusätzliche Informationen (neue Seite) <small class="text-muted">optional</small></h2>
+		<div class="form-group">
+			<label for="ex-material">Material <small class="text-muted">optional</small></label>
+			<textarea class="form-control" id="ex-material" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-info">Informationen <small class="text-muted">optional</small></label>
+			<textarea class="form-control" id="ex-info" rows="2"></textarea>
+		</div>
+
+	</div>
+</div>

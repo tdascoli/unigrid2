@@ -1,0 +1,82 @@
+---
+layout: bootstrap
+fabricator: false
+---
+
+{{> content-header}}
+
+<div class="row">
+	<div class="col-4">
+		<ul class="list-unstyled">
+			<li>Basics</li>
+			<li>Trainingsinhalte, Coaching <small class="text-muted">optional</small></li>
+			<li>Varianten <small class="text-muted">optional</small></li>
+		</ul>
+	</div>
+	<div class="col-8">
+		<!-- exercise - step1 -->
+		<h2>Basics</h2>
+		<div class="form-group">
+			<label for="ex-name">Name</label>
+			<input type="text" class="form-control" id="ex-name" placeholder="Enter text" />
+		</div>
+		<div class="form-group">
+			<label for="ex-beschreibung">Beschreibung [+]</label>
+			<textarea class="form-control" id="ex-beschreibung" rows="4"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-ablauf">Ablauf <small class="text-muted">optional</small> [+]</label>
+			<textarea class="form-control" id="ex-ablauf" rows="4"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-organisation">Organisation</label>
+			<input type="file" class="form-control-file" id="ex-organisation" />
+		</div>
+
+		<!-- step2 -->
+		<h2>Trainingsinhalte, Coaching <small class="text-muted">optional</small></h2>
+		<div class="form-group">
+			<label for="ex-trainingsinhalte">Trainingsinhalte</label>
+			<input type="text" class="form-control" id="ex-trainingsinhalte" placeholder="Enter text" />
+		</div>
+		<div class="form-group">
+			<label for="ex-coaching-ta">Coaching TA [+]</label>
+			<textarea class="form-control" id="ex-coaching-ta" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-coaching-te">Coaching TE [+]</label>
+			<textarea class="form-control" id="ex-coaching-te" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-coaching-me">Coaching ME [+]</label>
+			<textarea class="form-control" id="ex-coaching-me" rows="2"></textarea>
+		</div>
+		<div class="form-group">
+			<label for="ex-coaching-ko">Coaching KO [+]</label>
+			<textarea class="form-control" id="ex-coaching-ko" rows="2"></textarea>
+		</div>
+
+
+		<!-- step3 -->
+		<h2>Varianten <small class="text-muted">optional</small></h2>
+		<h3>Einfacher</h3>
+		<div class="form-group">
+			<label for="ex-organisation-less">Organisation</label>
+			<input type="file" class="form-control-file" id="ex-organisation-less" />
+		</div>
+		<div class="form-group">
+			<label for="ex-beschreibung-less">Beschreibung [+]</label>
+			<textarea class="form-control" id="ex-beschreibung-less" rows="2"></textarea>
+		</div>
+		<h3>Schwieriger</h3>
+		<div class="form-group">
+			<label for="ex-organisation-more">Organisation</label>
+			<input type="file" class="form-control-file" id="ex-organisation-more" />
+		</div>
+		<div class="form-group">
+			<label for="ex-beschreibung-more">Beschreibung [+]</label>
+			<textarea class="form-control" id="ex-beschreibung-more" rows="2"></textarea>
+		</div>
+		<!-- /exercise -->
+	</div>
+</div>

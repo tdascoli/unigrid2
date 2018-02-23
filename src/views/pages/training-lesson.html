@@ -1,0 +1,56 @@
+---
+layout: bootstrap
+fabricator: false
+---
+
+{{> content-header}}
+
+<div class="row">
+	<div class="col-4">
+		<ul class="list-unstyled">
+			<li><a href="{{baseurl}}/pages/training.html">Grundlagen</a></li>
+			<li><strong>Trainingsinhalte</strong></li>
+			<li>Zusätzliche Informationen <small class="text-muted">optional</small></li>
+		</ul>
+	</div>
+	<div class="col-8">
+		<h2>Exercises</h2>
+		{{> content-list-toolbar}}
+		{{> content-list-narrow}}
+	</div>
+</div>
+
+<hr />
+
+<h2>Trainingsinhalte</h2>
+<div class="list-group">
+	<div class="list-group-item flex-column align-items-start">
+		<div class="d-flex">
+			<div class="pr-2 w-25">
+				<div class="form-group">
+					<label for="exampleFormControlSelect1" aria-describedby="textHelpPart" class="sr-only">Part</label>
+					<select class="form-control" id="exampleFormControlSelect1">
+						<option>Einstimmen</option>
+						<option>G 1</option>
+						<option>A</option>
+						<option>G 2</option>
+						<option>Ausklang</option>
+					</select>
+					<small id="textHelpPart" class="form-text text-muted">G-A-G.</small>
+				</div>
+			</div>
+			<div class="pr-2 w-25">
+				<div class="form-group">
+					<label for="textInput" class="sr-only">Dauer</label>
+					<input type="number" class="form-control" id="textInput" aria-describedby="textHelp" placeholder="Dauer">
+					<small id="textHelp" class="form-text text-muted">Dauer in Minuten.</small>
+				</div>
+
+			</div>
+			<div class="d-flex flex-column">
+				<strong>Title of Training/Exercise</strong>
+				<small>Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</small>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: $footer-height;
+}
+body > .container {
+	padding-top: $navbar-height;
+}

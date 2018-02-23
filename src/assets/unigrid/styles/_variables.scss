@@ -21,17 +21,6 @@ $golden-ratio-small: 100 - percentage($golden-ratio);
   #GRID
 \*------------------------------------*/
 
-//@import 'unigrid/variables';
-/*
-$unigrid: 24;
-$unigrid-gutter: 6px;
-$unigrid-half-gutter: ($unigrid-gutter/2);
-$unigrid-brick-padding-ttb: 2px;
-$unigrid-brick-padding-rtl: 4px;
-$unigrid-brick-width: 42px;
-$unigrid-brick-height: 40px;
-*/
-
 $unigrid: 12;
 // todo halfgutter = 1/4 gutter!!
 $unigrid-brick-gutter: 5px;
@@ -42,7 +31,7 @@ $unigrid-brick-padding-ttb: 4px;
 $unigrid-brick-padding-rtl: 4px;
 
 $unigrid-brick-height: ($unigrid-gutter*4);
-$unigrid-brick-width: $unigrid-brick-height;
+$unigrid-brick-width: ($unigrid-gutter*4);
 
 //* mobile.grid */
 
@@ -66,3 +55,15 @@ $media-desktop: "only screen and (min-width: 1024px)";
 //* border */
 $unigrid-border-width: 2px;
 $unigrid-border-color: #000;
+
+/*------------------------------------*\
+  #NAVBAR
+\*------------------------------------*/
+
+$navbar-height: $unigrid-brick-height;
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+$footer-height: ($unigrid-brick-height / 2);

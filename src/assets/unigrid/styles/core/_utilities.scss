@@ -1,0 +1,23 @@
+/*------------------------------------*\
+  #GRID-FUNCTIONS
+\*------------------------------------*/
+
+@function brick-width($brick:1) {
+	@return (($unigrid-brick-width + $unigrid-half-gutter) * $brick) - $unigrid-half-gutter;
+}
+
+@function brick-height($brick:1) {
+	@return (($unigrid-brick-height + $unigrid-half-gutter) * $brick) - $unigrid-half-gutter;
+}
+
+@function unigrid-row() {
+	$brick-width: brick-width($unigrid);
+
+	@return $brick-width;
+}
+
+@function unigrid-container() {
+	$container-width: unigrid-row() + (2*$unigrid-gutter);
+
+	@return $container-width;
+}

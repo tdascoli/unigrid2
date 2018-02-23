@@ -1,6 +1,14 @@
-<div class="unigrid--container show-border">
+<div class="unigrid__container unigrid__header show-border">
+	<h1>Unigrid</h1>
+	<span>Toggle <a href="#" id="toggle-border">Border</a> <a href="#" id="hamburger-grid">Vertical</a> <a href="#" id="hamburger-col-grid">Horizontal</a> Grid</span>
+</div>
+
+<div class="grid unigrid__container unigrid--row"></div>
+<div class="col-grid unigrid__container unigrid--col"></div>
+<div class="unigrid__container show-border" id="show-grid">
+
 	<div class="unigrid unigrid--row">
-		<div class="brick brick--1">
+		<div class="brick brick--1 brick--col--2">
 			<div class="content">1</div>
 		</div>
 		<div class="brick brick--1">
@@ -133,5 +141,7 @@
 			<div class="content">12</div>
 		</div>
 	</div>
-	<hr>
+</div>
+<div class="unigrid__container unigrid__footer show-border">
+	Footer
 </div>

@@ -30,7 +30,7 @@
 
 @import 'core/utilities';
 @import 'core/mixins';
-@import 'core/variables';
+@import 'variables';
 
 /*------------------------------------*\
   #3RD-PARTY
@@ -42,6 +42,11 @@
   #MATERIALS
 \*------------------------------------*/
 
+@import 'materials/buttons';
+@import 'materials/footer';
+//@import 'materials/icons'; // todo change to piktogramme... and add font-awesome bool
+@import 'materials/layout';
+@import 'materials/mdi';
 @import 'materials/navbar';
 @import 'materials/typography';
 
