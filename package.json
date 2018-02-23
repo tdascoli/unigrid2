@@ -1,7 +1,7 @@
 {
-  "name": "unigrid",
+  "name": "unigrid-css",
   "version": "1.0.0",
-  "description": "unigrid",
+  "description": "unigrid css",
   "main": "README.md",
   "scripts": {
     "gulp": "gulp",

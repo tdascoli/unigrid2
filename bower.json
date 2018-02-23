@@ -1,0 +1,28 @@
+{
+  "name": "unigrid-css",
+  "description": "unigrid css",
+  "main": [
+    "src/assets/unigrid/styles/unigrid.scss",
+    "src/assets/unigrid/scripts/unigrid.js"
+  ],
+  "authors": [
+    "tdascoli"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "toolkit",
+    "styleguide",
+    "framework",
+    "scaffold",
+    "patterns",
+    "library"
+  ],
+  "homepage": "https://github.com/tdascoli/unigrid2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
