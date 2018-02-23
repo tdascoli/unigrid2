@@ -1,10 +1,10 @@
 {
   "name": "unigrid-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "unigrid css",
   "main": [
-    "src/assets/unigrid/styles/unigrid.scss",
-    "src/assets/unigrid/scripts/unigrid.js"
+    "build/styles/unigrid.css",
+    "build/scripts/unigrid.js"
   ],
   "authors": [
     "tdascoli"

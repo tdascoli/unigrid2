@@ -135,7 +135,7 @@ gulp.task('styles:build', function () {
 		.pipe(prefix('last 1 version'))
 		.pipe(gulpif(!config.dev, csso()))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest(config.build + '/css'))
+		.pipe(gulp.dest(config.build + '/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 gulp.task('sass-files:build', function() {
